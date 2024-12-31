@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ff9a9e, #fad0c4);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      animation: backgroundAnimation 10s infinite alternate;
+    }
+
+    @keyframes backgroundAnimation {
+      0% { background: linear-gradient(to right, #ff9a9e, #fad0c4); }
+      50% { background: linear-gradient(to right, #fbc2eb, #a6c1ee); }
+      100% { background: linear-gradient(to right, #ffecd2, #fcb69f); }
+    }
+
+    form {
+      background: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+      padding: 5px;
+      width: 150px;
+      transition: transform 0.3s;
+    }
+
+    form:hover {
+      transform: scale(1.03);
+    }
+
+    fieldset {
+      border: none;
+      margin-bottom: 5px;
+    }
+
+    legend {
+      font-size: 0.7em;
+      font-weight: bold;
+      color: #ff6f91;
+      padding: 3px 6px;
+      border-radius: 5px;
+      background: #fff0f5;
+      border: 1px solid #ffc1e3;
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 3px;
+      font-weight: bold;
+      color: #555;
+      font-size: 0.7em;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 4px;
+      margin-bottom: 4px;
+      border: 1px solid #ffc1e3;
+      border-radius: 8px;
+      font-size: 0.5em;
+      box-sizing: border-box;
+      transition: box-shadow 0.3s, border-color 0.3s;
+    }
+
+    input[type="radio"] {
+      width: auto;
+      margin-right: 4px;
+    }
+
+    textarea {
+      resize: none;
+      height: 40px;
+    }
+
+    input[type="submit"] {
+      background: linear-gradient(to right, #ff758c, #ff7eb3);
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-size: 0.6em;
+      font-weight: bold;
+      padding: 6px;
+      border-radius: 8px;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    input[type="submit"]:hover {
+      background: linear-gradient(to right, #ff7eb3, #ff758c);
+      transform: translateY(-3px);
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #ff6f91;
+      box-shadow: 0 0 6px rgba(255, 111, 145, 0.5);
+    }
+
+    input[type="radio"]:hover {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <fieldset> 
+      <legend>Personal Information</legend>
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Enter your username">
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Enter your password">
+
+      <label for="email">E-mail</label>
+      <input type="text" id="email" name="email" placeholder="Enter your email">
+
+      <label for="gender">Gender</label>
+      <select id="gender" name="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Your Favourite Editor</legend>
+      <label><input type="radio" name="editor" value="komodo"> KomodoEdit</label>
+      <label><input type="radio" name="editor" value="netbeans"> Netbeans</label>
+      <label><input type="radio" name="editor" value="sublime"> Sublime Text</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Your Favourite Browser</legend>
+      <label><input type="radio" name="browser" value="opera"> Opera</label>
+      <label><input type="radio" name="browser" value="chrome"> Google Chrome</label>
+      <label><input type="radio" name="browser" value="firefox"> Mozilla Firefox</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Your Favourite Operating System</legend>
+      <label><input type="radio" name="os" value="mac"> MAC OSX</label>
+      <label><input type="radio" name="os" value="linux"> Linux</label>
+      <label><input type="radio" name="os" value="windows"> Windows</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>Your Message</legend>
+      <textarea name="message" placeholder="Write your message here..."></textarea>
+      <input type="submit" value="Send Data">
+    </fieldset>
+  </form>
+</body>
+</html>
+
+
